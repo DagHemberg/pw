@@ -1,15 +1,17 @@
 # pw
 
-A small utility script for picking passwords or other values from your Bitwarden / Vaultwarden items directly in your terminal.
+![pw showcase with profile specification](showcase.png)
 
-![`pw` showcase with profile specification](showcase.png)
+`pw` is a small collection of scripts for picking passwords or other values from your Bitwarden / Vaultwarden items, directly in your terminal.
+
+Under the hood it uses [`rbw`](https://github.com/doy/rbw) as the password manager CLI, [`fzf`](https://github.com/junegunn/fzf) as the picker / fuzzy finder, [`jq`](https://jqlang.org/) for the preview window and [`fx`](https://fx.wtf/) for more detailed inspection of items in your vault (which can then be used to copy values which don't have pre-set shortcut keys)
 
 ## Requirements
 
-- [`rbw`](https://github.com/doy/rbw)
-- [`fzf`](https://github.com/junegunn/fzf)
-- [`jq`](https://jqlang.org/)
-- [`fx`](https://fx.wtf/)
+- rbw
+- fzf
+- jq
+- fx
 - A clipboard CLI utility
 
 For information on how to install each required program, please refer to their respective pages.[^1]
@@ -47,4 +49,4 @@ While in the picker, the following keybinds apply:
 | `ctrl+t` | Copy TOTP code |
 | `ctrl+p` | Open item in `fx` |
 
-[^2]: This has slightly different behaviour depending of the type of the item; for normal logins the password is copied, but for cards it's the card number, and for identities it's the name.
+[^2]: This has slightly different behaviour depending of the type of the item; for normal login items the password is copied, but for cards it's instead the card number, and for identities it's the full name.
