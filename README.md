@@ -10,11 +10,11 @@ A small utility script for picking passwords or other values from your Bitwarden
 - [`fzf`](https://github.com/junegunn/fzf)
 - [`jq`](https://jqlang.org/)
 - [`fx`](https://fx.wtf/)
-- [`wl-copy`](https://github.com/bugaevc/wl-clipboard) / [`xclip`](https://github.com/astrand/xclip) / `pbcopy`
+- A clipboard CLI utility
 
 For information on how to install each required program, please refer to their respective pages.[^1]
 
-[^1]: Depending on your distro, one of these should likely already come preinstalled
+[^1]: Depending on your DE / WM / OS, a clipboard CLI utility should likely already come preinstalled -- this script checks for [`wl-copy`](https://github.com/bugaevc/wl-clipboard) (Wayland), [`xclip`](https://github.com/astrand/xclip) (X11), `pbcopy` (macOS) and `clip.exe` (WSL, through Windows interop)
 
 ## Installation
 

@@ -10,7 +10,14 @@ dependency_check() {
     fi
   done
 
-  for clip in 'wl-copy' 'xclip -selection clipboard' 'pbcopy'; do
+  clips=(
+    'wl-copy'
+    'xclip -selection clipboard'
+    'pbcopy'
+    'clip.exe'
+  )
+
+  for clip in "${clips[@]}"; do
     set -- "$clip"
     if command -v "$1" >/dev/null; then
       clipboard="$clip"
